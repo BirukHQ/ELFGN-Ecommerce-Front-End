@@ -1,0 +1,248 @@
+/* General Styles */
+body {
+    font-family: 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #0044cc;
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #ff6600;
+    border-radius: 5px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #ff8533;
+}
+
+/* Checkout Section */
+.checkout {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.checkout h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.checkout-section {
+    margin-bottom: 20px;
+}
+
+.checkout-section h2 {
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    color: #003366;
+    border-bottom: 2px solid #003366;
+    padding-bottom: 5px;
+}
+
+.checkout-section label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.checkout-section input[type="text"],
+.checkout-section input[type="email"],
+.checkout-section input[type="tel"],
+.checkout-section input[type="number"],
+.checkout-section select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.checkout-section input[type="radio"] {
+    margin-right: 10px;
+}
+
+.checkout-section .price {
+    font-weight: bold;
+    color: #003366;
+}
+
+/* Order Summary */
+.checkout-section p {
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+.checkout-section h3 {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #003366;
+}
+
+/* Place Order Button */
+button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background-color: #003366;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button[type="submit"]:hover {
+    background-color: #00509e;
+}
+
+/* Footer */
+footer {
+    background-color: #003366;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Mobile Responsiveness */
+
+/* Tablets and below */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .search-bar {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .search-bar input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    button[type="submit"] {
+        font-size: 1em;
+        padding: 12px;
+    }
+
+    .checkout {
+        width: 95%;
+    }
+}
+
+/* Small screen devices */
+@media (max-width: 480px) {
+    .checkout h1 {
+        font-size: 1.5em;
+    }
+
+    .checkout-section h2 {
+        font-size: 1em;
+    }
+
+    .checkout-section input[type="text"],
+    .checkout-section input[type="email"],
+    .checkout-section input[type="tel"],
+    .checkout-section input[type="number"],
+    .checkout-section select {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+
+    button[type="submit"] {
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    footer {
+        padding: 8px;
+        font-size: 0.8em;
+    }
+}

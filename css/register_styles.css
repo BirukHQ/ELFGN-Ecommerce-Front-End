@@ -1,0 +1,244 @@
+/* General Page Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Header Styles */
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #0044cc; /* Blue background */
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #ff6600; /* Orange hover effect */
+    border-radius: 5px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #ff6600; /* Matching orange color */
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #ff8533; /* Lighter orange on hover */
+}
+
+/* Form Container Styles */
+.register-form {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.register-form h1 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #002f6c; /* Match header color */
+}
+
+.register-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.register-form input[type="text"],
+.register-form input[type="email"],
+.register-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.register-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #002f6c; /* Dark blue background */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.register-form button:hover {
+    background-color: #003b7d; /* Slightly lighter blue on hover */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #002f6c; /* Dark blue background */
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+/* Mobile Responsiveness */
+
+/* Tablets and smaller screens (max-width: 768px) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .search-bar {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .search-bar input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .register-form {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .register-form h1 {
+        font-size: 22px;
+    }
+
+    .register-form input[type="text"],
+    .register-form input[type="email"],
+    .register-form input[type="password"] {
+        padding: 8px;
+        margin-bottom: 15px;
+    }
+
+    .register-form button {
+        padding: 10px;
+    }
+
+    footer {
+        padding: 20px;
+    }
+}
+
+/* Mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    nav ul li a {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    .search-bar button {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .register-form {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .register-form h1 {
+        font-size: 20px;
+    }
+
+    .register-form input[type="text"],
+    .register-form input[type="email"],
+    .register-form input[type="password"] {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .register-form button {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    footer {
+        padding: 15px;
+    }
+}
+

@@ -1,0 +1,98 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header styles */
+header {
+    background-color: #004080;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Order confirmation section styling */
+.order-confirmation {
+    text-align: center;
+    margin: 100px 20px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.order-confirmation h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #008080;
+}
+
+.order-confirmation p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.order-summary {
+    margin: 30px 0;
+}
+
+.order-summary h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.order-summary p {
+    font-size: 18px;
+}
+
+.order-confirmation .btn {
+    background-color: #008080;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.order-confirmation .btn:hover {
+    background-color: #005f5f;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #004080;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

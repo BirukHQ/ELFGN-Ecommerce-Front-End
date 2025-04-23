@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/login_styles.css">
+    <script>
+        function validateLogin(event) {
+            event.preventDefault(); // Prevent form submission
+            
+            // Get username and password input values
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Predefined credentials for validation
+            var validUsername = "user123";
+            var validPassword = "password123";
+
+            // Check if the inputs match the predefined credentials
+            if (username === validUsername && password === validPassword) {
+                window.location.href = "welcome.html"; // Redirect to the welcome page
+                
+            } else {
+                alert("Access Denied");
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">ELFGN.COM</div>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="catagories.html">Categories</a></li>
+                <li><a href="brands.html">Brands</a></li>
+                <li><a href="sales.html">Sale</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="login.html">Sign In </a></li>
+                <li><a href="register.html">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Login Form -->
+    <section class="login-form">
+        <h1>Login</h1>
+        <form onsubmit="validateLogin(event)">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Elfgn. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="../css/cart_styles.css">
+    <script>
+       // Function to reset the quantity to 1 and recalculate the total
+function resetQuantity(button) {
+    const cartItem = button.closest('.cart-item');
+    const quantityInput = cartItem.querySelector('input[type="number"]');
+    quantityInput.value = 1;
+    updateTotal();
+}
+
+// Function to calculate the total price based on quantities
+function updateTotal() {
+    let total = 0;
+    const cartItems = document.querySelectorAll('.cart-item');
+
+    // Loop through each cart item to calculate the total
+    cartItems.forEach(item => {
+        const price = parseFloat(item.querySelector('.price').textContent.replace('$', ''));
+        // Get the quantity and ensure it's a positive integer
+        let quantity = parseInt(item.querySelector('input[type="number"]').value);
+
+        // If quantity is not a number or is less than 1, set it to 1
+        if (isNaN(quantity) || quantity < 1) {
+            quantity = 1;
+            item.querySelector('input[type="number"]').value = quantity;
+        }
+
+        total += price * quantity;
+    });
+
+    // Update the total display
+    document.querySelector('.cart-total h2').textContent = `Total: ETB ${total.toFixed(2)}`;
+}
+
+// Attach the updateTotal function to quantity input change
+function attachQuantityChangeListeners() {
+    const quantityInputs = document.querySelectorAll('.cart-item input[type="number"]');
+    quantityInputs.forEach(input => {
+        input.addEventListener('change', updateTotal);
+    });
+}
+
+// Call the function to attach event listeners once the page is loaded
+window.onload = attachQuantityChangeListeners;
+
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">ELFGN.COM</div>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="catagories.html">Categories</a></li>
+                <li><a href="brands.html">Brands</a></li>
+                <li><a href="sales.html">Sale</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="login.html">Sign In </a></li>
+                <li><a href="register.html">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Cart Overview Section -->
+    <section class="cart-overview">
+        <h1>Shopping Cart</h1>
+        <div class="cart-items">
+            <div class="cart-item">
+                <img src="/images/XG true Pro.jpg" alt="Product 1">
+                <div class="cart-info">
+                    <h3>XG True Pro Earpod</h3>
+                    <p>Quantity: <input type="number" value="1" min="1"></p>
+                    <p>Price: <span class="price">4520 ETB</span></p>
+                    <button onclick="resetQuantity(this)">Remove</button>
+                </div>
+            </div>
+            <!-- Add more cart items if needed -->
+           
+        </div>
+        <div class="cart-total">
+            <h2>Total: ETB 0.00</h2>
+            <button onclick="window.location.href='checkout.html';">Checkout</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Elfgn. All rights reserved.</p>
+    </footer>
+</body>
+</html>

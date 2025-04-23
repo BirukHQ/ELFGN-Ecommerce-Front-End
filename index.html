@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elfgn - Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo"><a href="index.html">ELFGN.COM</a></div>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="pages/catagories.html">Categories</a></li>
+                <li><a href="pages/brands.html">Brands</a></li>
+                <li><a href="pages/sales.html">Sale</a></li>
+                <li><a href="pages/contact.html">Contact Us</a></li>
+                <li><a href="pages/login.html">Sign In </a></li>
+                <li><a href="pages/register.html">Sign Up</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for products...">
+            <button>Search</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-slider">
+            <div class="slide">
+                <img src="images/clo2.jpg" alt="Promotion 1">
+                <div class="caption">
+                    <h2>Big Fashion Sale</h2>
+                    <p>Up to 50% off on top brands</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="images/msi_home.png" alt="Promotion 2">
+                <div class="caption">
+                    <h2>Ultimate Gaming Setup</h2>
+                    <p>Powerful MSI Hardware for Peak Performance</p>
+                </div>
+            </div>
+            
+            <!-- Navigation Arrows -->
+            <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+            <a class="next" onclick="moveSlide(1)">&#10095;</a>
+        </div>
+    </section>
+    
+
+    <!-- Featured Products Section -->
+    <section class="featured-products">
+        <h2>Featured Products</h2>
+        <div class="products-grid">
+            <div class="product-item">
+                <img src="images/makeup kit.jpg" alt="Product 1">
+                <h3>Full Make up Kit</h3>
+                <p>ETB 3,390 </p>
+                <button onclick="window.location.href='pages/makeup_product.html';">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="images/XG true Pro.jpg" alt="Product 2">
+                <h3>XG True Pro Earpod</h3>
+                <p>ETB 4,520</p>
+                <button onclick="window.location.href='pages/earpod_product.html';">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="images/Stainless steel kitchen utensils set.jpg" alt="Product 2">
+                <h3>Stainless Steel Kitchen Utensils Tool</h3>
+                <p>ETB 5,000</p>
+                <button onclick="window.location.href='pages/utensils_product.html';">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="images/taketa.jpg" alt="Product 2">
+                <h3>Professional Soccer Shoe</h3>
+                <p>ETB 2,200</p>
+                <button onclick="window.location.href='pages/soccershoe_product.html';">Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <img src="images/jacket.jpg" alt="Product 2">
+                <h3>Jacket</h3>
+                <p>ETB 3,000</p>
+                <button onclick="window.location.href='pages/jacket_product.html';">Add to Cart</button>
+            </div>
+            <!-- See More Button -->
+<div class="see-more-container">
+    <button class="see-more-btn" onclick="window.location.href='pages/see-more.html';">See More...</button>
+</div>
+
+            <!-- More product items -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Elfgn. All rights reserved.</p>
+    </footer>
+
+ <script>
+    let slideIndex = 1; // Start with the first slide
+showSlides(slideIndex);
+
+// Function to move the slides manually
+function moveSlide(n) {
+    showSlides(slideIndex += n);
+}
+
+// Function to display the appropriate slide
+function showSlides(n) {
+    let slides = document.getElementsByClassName("slide");
+    
+    // If n is greater than the number of slides, reset to the first slide
+    if (n > slides.length) {slideIndex = 1}
+    
+    // If n is less than 1, set to the last slide
+    if (n < 1) {slideIndex = slides.length}
+    
+    // Hide all slides
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    
+    // Show the current slide
+    slides[slideIndex - 1].style.display = "block";  
+}
+
+// Automatically move the slides every 5 seconds
+setInterval(function() {
+    moveSlide(1);
+}, 5000); // Change image every 5 seconds
+
+</script>
+</body>
+</html>

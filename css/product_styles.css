@@ -1,0 +1,262 @@
+/* General Page Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Header Styles */
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #0044cc; /* Blue background */
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #ff6600; /* Orange hover effect */
+    border-radius: 5px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #ff6600; /* Matching orange color */
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #ff8533; /* Lighter orange on hover */
+}
+
+
+/* Product Details Section */
+.product-details {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.product-image {
+    flex: 1;
+    max-width: 500px;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product-info {
+    flex: 2;
+    margin-left: 20px;
+}
+
+.product-info h1 {
+    font-size: 28px;
+    margin-top: 0;
+    color: #002f6c; /* Match header color */
+}
+
+.product-info p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.product-info p:first-of-type {
+    font-weight: bold;
+    font-size: 24px;
+    color: #d44f3b; /* Price color */
+}
+
+.product-info button {
+    padding: 15px 25px;
+    background-color: #002f6c; /* Dark blue background */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product-info button:hover {
+    background-color: #003b7d; /* Slightly lighter blue on hover */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #002f6c; /* Dark blue background */
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+/* Mobile Responsiveness */
+
+/* Tablets and smaller screens (max-width: 768px) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .search-bar {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .search-bar input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .product-details {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .product-image, .product-info {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .product-info {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .product-info h1 {
+        font-size: 24px;
+    }
+
+    .product-info p {
+        font-size: 16px;
+    }
+
+    .product-info button {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    footer {
+        padding: 20px;
+    }
+}
+
+/* Mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    nav ul {
+        font-size: 14px;
+    }
+
+    .search-bar button {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .product-details {
+        padding: 15px;
+    }
+
+    .product-info h1 {
+        font-size: 20px;
+    }
+
+    .product-info p {
+        font-size: 14px;
+    }
+
+    .product-info button {
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+
+    footer {
+        padding: 15px;
+    }
+}
